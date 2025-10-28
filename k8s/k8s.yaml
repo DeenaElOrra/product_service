@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: product
+  name: product_service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: product
+      app: product_service
   template:
     metadata:
       labels:
-        app: product
+        app: product_service
     spec:
       containers:
-        - name: product
-          image: deenaelorra/product:latest
+        - name: product_service
+          image: deenaelorra/product_service:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -55,9 +55,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: product
+  name: product_service
   labels:
-    app: product
+    app: product_service
 spec:
   type: ClusterIP
   ports:
@@ -66,4 +66,4 @@ spec:
       targetPort: 8080
 
   selector:
-    app: product
+    app: product_service
