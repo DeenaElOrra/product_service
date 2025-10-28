@@ -12,7 +12,7 @@
 
     <groupId>store</groupId>
     <artifactId>product-service</artifactId>
-    <version>1.0.0</version>ƒ
+    <version>1.0.0</version>
     <name>Product Service</name>
 
     <properties>
