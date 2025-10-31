@@ -11,7 +11,7 @@ import lombok.Setter;
 import lombok.experimental.Accessors;
 
 @Entity
-@Table(name = "product")
+@Table(name = "product", schema = "product")
 @Setter @Accessors(chain = true, fluent = true)
 @NoArgsConstructor
 public class ProductModel {
